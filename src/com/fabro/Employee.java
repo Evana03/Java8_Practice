@@ -1,10 +1,28 @@
 package com.fabro;
 
 public class Employee {
-    public Employee(String name, String dept, int salary) {
+
+    private String name;
+    private String dept;
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", dept='" + dept + '\'' +
+                ", active='" + active + '\'' +
+                ", Salary=" + Salary +
+                '}';
+    }
+
+    private String active;
+    private int Salary;
+
+    public Employee(String name, String dept, String active, int salary) {
         this.name = name;
         this.dept = dept;
-        Salary = salary;
+        this.active = active;
+        this.Salary = salary;
     }
 
     public String getName() {
@@ -31,8 +49,11 @@ public class Employee {
         Salary = salary;
     }
 
-    private String name;
-    private String dept;
-    private int Salary;
+    public String getActive() {
+        return active;
+    }
 
+    public void setActive(String active) {
+        this.active = active;
+    }
 }
